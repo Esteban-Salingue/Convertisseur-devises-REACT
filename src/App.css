@@ -1,0 +1,160 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    color: #fff; /* Texte en blanc pour contraster avec le fond sombre */
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.box {
+    background: rgba(0, 0, 0, 0.6); /* Boîtes semi-transparentes */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    min-width: 250px;
+    flex: 1;
+    margin: 10px;
+}
+
+.box input, .box select {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.2rem;
+    width: 80%;
+}
+
+/* Supprimer les flèches d'incrémentation dans les champs number */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield; /* Pour Firefox */
+    text-align: center;
+    background: #333;
+    color: #fff;
+}
+
+label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem; /* Augmenter la taille de la flèche */
+    margin: 0 20px;
+    color: #fff; /* Mettre la flèche en blanc pour contraster avec le fond sombre */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ajouter une ombre pour la rendre plus visible */
+}
+
+.result-box {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 800px;
+    margin-top: 40px;
+}
+
+.result-box p {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none; /* Empêche les interactions */
+    user-select: none; /* Empêche la sélection de la vidéo */
+}
+
+/* Ajouter du style à l'input de recherche */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Ajouter du style aux suggestions */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: block; /* Assurez-vous que c'est visible lorsqu'on en a besoin */
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li:hover {
+    background-color: #eee;
+}

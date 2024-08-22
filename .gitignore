@@ -1,0 +1,34 @@
+# Ignorer le dossier node_modules
+node_modules/
+
+# Ignorer les fichiers de log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignorer les dossiers de sortie
+dist/
+build/
+
+# Ignorer les fichiers de configuration spécifiques à l'éditeur
+.vscode/
+.idea/
+
+# Ignorer les fichiers de configuration spécifiques à l'OS
+.DS_Store
+Thumbs.db
+
+# Ignorer les fichiers de déploiement
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignorer les fichiers de lock
+package-lock.json
+yarn.lock
+
+# Ignorer les fichiers de cache
+.cache/
+
